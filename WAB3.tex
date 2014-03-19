@@ -1,0 +1,99 @@
+%
+% Dokumentation SWE Energy 
+%
+
+\input{praeambel.tex}
+
+
+\title{WAB gedöhns auf SWE Vorlage\\Software Engeneering Prüfungsvorleistung Energiesimulation}
+\author{Thomas Melcher\\Felix Michalek\\Steffen Witte\\Robert Geißler\\Sebastian Ludwig\\Skadi Passek\\ hier ist meine erste Änderung}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	
+	
+	\chapter{Projekttreiber}
+		\section{Zweck des Projekts}
+			\subsection{Inhalt}
+				Realisierung eines komplexen Softwareprojekts dessen Ergebnis eine Prüfungsvorleistung ist. Ziel ist es eine Simulation zu erstellen die für eine Menge von Energieverbrauchern, Energieerzeugern und Speichern überprüft ob der Energiehaushalt ausgeglichen ist.
+			\subsection{Motivation}
+				Das Projekt ist eine Aufgabe im Fach Softwareengeneering des Studiums der Wirtschaftsinformatik und ist Voraussetzung für die Modulprüfung. 
+ 			\subsection{Form}
+ 				Als Ergebnis stehen am Ende die Energie Simulation als kommentierter Quelltext und verschiedene Entwickler/Projekt Dokumentationen in der Form von UMLs und verschiedenen Diagrammen.
+		\section{Kunden und andere Beteiligte}
+			Prof. Dr.-Ing. Sabine Wieland
+			wieland@hft-leipzig.de
+
+			Dipl.-Ing. (FH) Karsten Hain 
+			hain@hft-leipzig.de
+
+
+	\chapter{Vorgegebene Randbedingungen für das Projekt}
+		\section{Entwicklungsumgebung}
+			\subsection{Beschreibung}
+				Die Energiesimulation ist eine Webapplikation. Sie ist Betriebssystem- und Browserunabhängig. 
+			\subsection{Motivation}
+				Die Simulation ist eine Webapplikation um Installationen für den Nutzer zu vermeiden.
+		\section{Externe Software}
+			Benötigt zum Ausführen wird ein aktueller HTML5 fähiger Browser.
+		\section{Zeitliche Eingrenzung}
+			Abgabetermin ist 2 Wochen vor Vorlesungsende.
+
+	\chapter{Relevante Fakten und Annahmen}
+		\section{Quellen}
+			\cite{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
+		\section{Annahmen}
+			Es gab folgende Annahmen:
+			\begin{itemize}
+      			\item Blockheizkraftwerke sind in der Realität Gaskraftwerke deren Abwärme in Siedlungen genutzt werden. Da in unserer Simulation keine Wärme betrachtet wird sind sie für uns nicht von belangen.
+      			\item Ölkraftwerke stellen weniger als 1\% in der deutschen Energieversorgung dar und sind deshalb irrelevant für die Simulation. Anstatt des Ölkraftwerks wurde ein Wasserkraftwerk hinzugefügt
+      			\item Sonnenlicht verhält sich nicht zufällig sondern Zeitabhängig.
+      			\item Kraftwerke müssen nicht gebaut wurden, es wird nur die Vorbereitungszeit für die Anbindung ans Stromnetz berücksichtigt
+      			\item Energiespeicher speißen ins gesamte Stromnetz ein und sind nicht exklusiv für den Haushalt der sie beinhaltet
+      			\item Energiespeicher haben eine Kapazität, eine Entlade- und Laderate und berechnen sich nicht prozentual von der aktuellen Gesamtenergieproduktion wie in der Aufgabenstellung beschrieben wurde. Das von uns angenommene Verhalten entsprich eher der Realität weil Energiespeicher eine feste Kapazität haben.
+      			\item Die Region für die Simulation ist Deutschland
+      			\item Haushalte verbrauchen nicht statisch, sondern tageszeitabhängig
+      			\item Die Simulationsgeschwindigkeit ist wählbar
+   			\end{itemize}
+	\chapter{Datenmodelle und Diagramme}
+		\section{Klassendiagramm}
+			\bilded{Class}{0.9\textwidth}{Klassendiagramm}{Klassendiagramm}{angle={270}}
+		\section{Sequenzdiagramm}
+			\bilded{Sequence}{0.8\textwidth}{Sequenzdiagramm}{Sequenzdiagramm}{angle={270}}
+			\newpage
+		\section{Zustandsdiagramm}
+			\bilde{State}{0.6\textwidth}{Zustandsdiagramm}{Zustandsdiagramm}
+			\newpage
+		\section{Aktivitätsdiagramm}
+			\bilde{Activity}{0.8\textwidth}{Aktivitätsdiagramm}{Aktivitätsdiagramm}
+			\newpage
+		\section{Anwendungsfalldiagramm}
+			\bilded{UseCase}{0.6\textwidth}{Anwendungsfalldiagramm}{Klassendiagramm}{angle={270}}
+		
+	\chapter{Funktionaler Umfang}
+			\bilde{Aufgabenstellung}{0.7\textwidth}{Aufgabenstellung}{Aufgabenstellung}
+		\section{Quellcode}
+			Die erarbeiteten Quelldateien und UML Diagramme befinden sich in den gleichnamigen Ordnern. In dem Ordner ''Energieprojekt/Quell Daten/energie.zip/energy'' ist der von uns erarbeitete Quellcode in Form von ''.coffee'' Dateien enthalten.
+	\appendix
+	\listoffigures
+	\begin{thebibliography}{999}
+		\bibitem 1 de.wikipedia.org/wiki/Liste\_deutscher\_Kraftwerke
+ 		\bibitem 2 ag-energiebilanzen.de/[...]\_brd\_stromerzeugung1990\_2012.pdf
+ 		\bibitem 3 de.wikipedia.org/wiki/Liste\_der\_Kernreaktoren\_in\_Deutschland
+ 		\bibitem 4 www.zeit.de/wissen/umwelt/2011-05/standby-atomkraftwerk-text/seite-1
+ 		\bibitem 5 de.wikipedia.org/wiki/Kohlekraftwerk
+ 		\bibitem 6 commons.wikimedia.org/wiki/File:PV-Norddeutschland-2008-Monatsdarstellung.svg
+ 		\bibitem 7 commons.wikimedia.org/wiki/File:Photovoltaics\_change\_of\_production\_during\_day\_and\_year.png
+ 		\bibitem 8 de.wikipedia.org/wiki/Liste\_von\_Wasserkraftwerken\_in\_Deutschland
+ 		\bibitem 9 www.wir-ernten-was-wir-saeen.de/energiespiel/content/stromangebot-kraftwerke
+ 		\bibitem 0 www.vdi.de/[...]/CO2-Emissionen[...]Stromerzeugung\_01.pdf
+
+	\end{thebibliography}
+\end{document}
+
+%
+% EOF
+%
+
